@@ -1,0 +1,8 @@
+gradio==5.23.1
+groq==0.18.0
+chromadb==0.6.3
+sentence-transformers==3.4.1
+numpy==1.26.4
+pandas==2.2.3
+ddgs==9.5.4
+
