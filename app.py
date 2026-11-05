@@ -100,7 +100,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="TopperMind — Teach-Back Arena") 
     state=gr.State({"topic":"","round":0,"explanations":[],"done":False}); scores=gr.State({})
     with gr.Row():
         mode=gr.Dropdown(list(NOTES),value="College CS (DSA + DBMS)",label="Mode / knowledge base")
-        language=gr.Dropdown(["English","Hindi","Telugu"],value="English",label="Language")
+        language=gr.Dropdown(["English","Hindi","Telugu","Tamil"],value="English",label="Language")
     demo_btn=gr.Button("🎬 Demo Mode: prefill inputs")
     with gr.Tabs():
         with gr.Tab("🧒 Teach-Back Arena"):
