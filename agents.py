@@ -51,7 +51,8 @@ def followup(topic, notes, language):
 def score_explanation(explanation, answer, embedder):
     """Cosine similarity maps to 0–100 via clip((cosine - .15)/.65, 0, 1); this lets a solid paraphrase reach 80+ while avoiding high scores for generic overlap."""
     try:
-        model = getattr(embedder, "model", embedder)
+        # ChromaDB 0.6.3 stores this model as `_model`; newer wrappers may expose `model`.
+        model = getattr(embedder, "_model", getattr(embedder, "model", embedder))
         vecs = np.asarray(model.encode([explanation, answer], normalize_embeddings=True), dtype=float)
         cosine = float(np.dot(vecs[0], vecs[1]))
         score = int(round(float(np.clip((cosine - .15) / .65, 0, 1)) * 100))
