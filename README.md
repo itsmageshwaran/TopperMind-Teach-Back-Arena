@@ -23,7 +23,7 @@ Good coaching can be unaffordable or unavailable. TopperMind gives learners a li
 - Three-round, Python-controlled teach-back flow with deterministic embedding similarity scores.
 - Grounded question answering, optional DuckDuckGo current-affairs search, and user-added notes.
 - Note-grounded MCQ generation, weighted study plan, and per-user progress view.
-- English, Hindi, and Telugu prompt language selection.
+- English, Hindi, Telugu, and Tamil prompt language selection.
 
 ## Architecture
 
